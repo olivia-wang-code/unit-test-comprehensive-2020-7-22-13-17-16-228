@@ -1,6 +1,9 @@
 import example.GuessNumber;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class GuessNumberTest {
@@ -9,8 +12,8 @@ public class GuessNumberTest {
         //given
         GuessNumber guessNumber = new GuessNumber();
         //»¨À¨ºÅ
-        int[] answer = {1, 2, 3, 4};
-        int[] inputGuess = {1, 2, 3, 4};
+        List<Integer> answer = Arrays.asList(1, 2, 3, 4);
+        List<Integer> inputGuess = Arrays.asList(1, 2, 3, 4);
         //when
         String result = guessNumber.guess(inputGuess, answer);
         //then
@@ -21,8 +24,8 @@ public class GuessNumberTest {
         //given
         GuessNumber guessNumber = new GuessNumber();
         //»¨À¨ºÅ
-        int[] answer = {1, 2, 3, 4};
-        int[] inputGuess = {1, 3, 2, 4};
+        List<Integer> answer = Arrays.asList(1, 2, 3, 4);
+        List<Integer> inputGuess = Arrays.asList(1, 3, 2, 4);
         //when
         String result = guessNumber.guess(inputGuess, answer);
         //then
