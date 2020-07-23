@@ -8,6 +8,7 @@ public class GuessNumber {
    public String guess(List inputGuess,List answer) {
        if (isAllCorrect(inputGuess, answer)) return "4A0B";
        if(isOutput2A2B(inputGuess,answer)) return "2A2B";
+       if(isOutput0A4B(inputGuess,answer)) return "0A4B";
        return null;
    }
 
@@ -44,5 +45,15 @@ public class GuessNumber {
            };
        }
       return true;
+    }
+    private boolean isOutput0A4B(List inputGuess, List answer) {
+        boolean isAllCorrect = true;
+        int count=0;
+        for (int index = 0; index < 4; index++) {
+            if (inputGuess.get(index) != answer.get(index)) {
+                count++;
+            }
+        }
+        return count==4&&isEqualsList(inputGuess,answer);
     }
 }
