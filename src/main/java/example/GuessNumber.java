@@ -9,6 +9,7 @@ public class GuessNumber {
        if (isAllCorrect(inputGuess, answer)) return "4A0B";
        if(isOutput2A2B(inputGuess,answer)) return "2A2B";
        if(isOutput0A4B(inputGuess,answer)) return "0A4B";
+       if(isOutput0A0B(inputGuess,answer)) return "0A0B";
        return null;
    }
 
@@ -55,5 +56,8 @@ public class GuessNumber {
             }
         }
         return count==4&&isEqualsList(inputGuess,answer);
+    }
+    private boolean isOutput0A0B(List inputGuess, List answer) {
+        return !isEqualsList(inputGuess,answer);
     }
 }
