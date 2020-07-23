@@ -55,5 +55,17 @@ public class GuessNumberTest {
         //then
         assertEquals("0A0B", result);
     }
+    @Test
+    void should_return_1A0B_when_guess_give_answer_1234_and_input_guess_1756() {
+        //given
+        GuessNumber guessNumber = new GuessNumber();
+        //»¨À¨ºÅ
+        List<Integer> answer = Arrays.asList(1, 2, 3, 4);
+        List<Integer> inputGuess = Arrays.asList(1,7,5,6);
+        //when
+        String result = guessNumber.guess(inputGuess, answer);
+        //then
+        assertEquals("1A0B", result);
+    }
 }
 
