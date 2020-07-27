@@ -18,7 +18,6 @@ public class GuessNumber {
     public int getGuessNumber() {
         return guessNumber;
     }
-
     public String guess(List<Integer> inputGuess, List<Integer> answer) {
 
         boolean isAllCorrect = true;
@@ -38,10 +37,7 @@ public class GuessNumber {
     }
     public Boolean guessTimes(){
         this.guessNumber++;
-        if (this.guessNumber > 6) {
-            return false;
-        }
-        return true;
+        return this.guessNumber <= 6;
     }
 }
 

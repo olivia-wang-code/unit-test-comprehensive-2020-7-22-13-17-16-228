@@ -85,7 +85,7 @@ public class GuessNumberTest {
         assertEquals(false, result);
     }
     @Test
-    void should_return_false_when_guess_given_answer_1234_and_input_guess_size_is_not_4() {
+    void should_return_false_when_guess_given_input_guess_size_is_not_4() {
         //given
         AvailableInput availableInput = new AvailableInput();
         List<Integer> inputGuess = Arrays.asList(1,2,3,4,5);
@@ -95,7 +95,7 @@ public class GuessNumberTest {
         assertEquals(false, result);
     }
     @Test
-    void should_return_false_when_guess_given_and_guess_time_is_more_than_6() {
+    void should_return_false_when_guess_given_guess_time_is_more_than_6() {
         //given
         GuessNumber guessNumber=new GuessNumber();
         //when
