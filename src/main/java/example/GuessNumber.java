@@ -36,7 +36,7 @@ public class GuessNumber {
         }
         return String.format("%sA%sB", countA, countB);
     }
-    public Boolean guessTimes(int guessNumber){
+    public Boolean guessTimes(){
         this.guessNumber++;
         if (this.guessNumber > 6) {
             return false;

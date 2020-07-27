@@ -99,7 +99,10 @@ public class GuessNumberTest {
         //given
         GuessNumber guessNumber=new GuessNumber();
         //when
-        Boolean result=guessNumber.guessTimes(7);
+        for(int i=0;i<6;i++){
+            guessNumber.guessTimes();
+        }
+        Boolean result=guessNumber.guessTimes();
         //then
         assertEquals(false, result);
     }
