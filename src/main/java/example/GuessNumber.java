@@ -5,7 +5,22 @@ import java.util.Arrays;
 import java.util.List;
 
 public class GuessNumber {
+    private int guessNumber=0;
+
+    public GuessNumber(int guessNumber) {
+        this.guessNumber = guessNumber;
+    }
+
+    public GuessNumber() {
+        this.guessNumber = guessNumber;
+    }
+
+    public int getGuessNumber() {
+        return guessNumber;
+    }
+
     public String guess(List<Integer> inputGuess, List<Integer> answer) {
+
         boolean isAllCorrect = true;
         int countA = 0;
         int countB = 0;

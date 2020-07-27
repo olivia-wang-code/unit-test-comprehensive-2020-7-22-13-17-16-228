@@ -1,3 +1,4 @@
+import example.AvailableInput;
 import example.GuessNumber;
 import org.junit.jupiter.api.Test;
 
@@ -8,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class GuessNumberTest {
     @Test
-    void should_return_4AOB_when_guess_give_answer_1234_and_input_guess_1234() {
+    void should_return_4AOB_when_guess_given_answer_1234_and_input_guess_1234() {
         //given
         GuessNumber guessNumber = new GuessNumber();
         List<Integer> answer = Arrays.asList(1, 2, 3, 4);
@@ -19,7 +20,7 @@ public class GuessNumberTest {
         assertEquals("4A0B", result);
     }
     @Test
-    void should_return_0A0B_when_guess_give_answer_1234_and_input_guess_5678() {
+    void should_return_0A0B_when_guess_given_answer_1234_and_input_guess_5678() {
         //given
         GuessNumber guessNumber = new GuessNumber();
         List<Integer> answer = Arrays.asList(1, 2, 3, 4);
@@ -30,7 +31,7 @@ public class GuessNumberTest {
         assertEquals("0A0B", result);
     }
     @Test
-    void should_return_1A0B_when_guess_give_answer_1234_and_input_guess_1756() {
+    void should_return_1A0B_when_guess_given_answer_1234_and_input_guess_1756() {
         //given
         GuessNumber guessNumber = new GuessNumber();
         List<Integer> answer = Arrays.asList(1, 2, 3, 4);
@@ -41,7 +42,7 @@ public class GuessNumberTest {
         assertEquals("1A0B", result);
     }
     @Test
-    void should_return_2A2B_when_guess_give_answer_1234_and_input_guess_1324() {
+    void should_return_2A2B_when_guess_given_answer_1234_and_input_guess_1324() {
         //given
         GuessNumber guessNumber = new GuessNumber();
         List<Integer> answer = Arrays.asList(1, 2, 3, 4);
@@ -52,7 +53,7 @@ public class GuessNumberTest {
         assertEquals("2A2B", result);
         }
     @Test
-    void should_return_0A2B_when_guess_give_answer_1234_and_input_guess_3456() {
+    void should_return_0A2B_when_guess_given_answer_1234_and_input_guess_3456() {
         //given
         GuessNumber guessNumber = new GuessNumber();
         List<Integer> answer = Arrays.asList(1, 2, 3, 4);
@@ -63,7 +64,7 @@ public class GuessNumberTest {
         assertEquals("0A2B", result);
     }
     @Test
-    void should_return_0A4B_when_guess_give_answer_1234_and_input_guess_4321() {
+    void should_return_0A4B_when_guess_given_answer_1234_and_input_guess_4321() {
         //given
         GuessNumber guessNumber = new GuessNumber();
         List<Integer> answer = Arrays.asList(1, 2, 3, 4);
@@ -73,6 +74,15 @@ public class GuessNumberTest {
         //then
         assertEquals("0A4B", result);
     }
-
+    @Test
+    void should_return_false_when_guess_given_input_guess_has_same_number() {
+        //given
+        AvailableInput availableInput = new AvailableInput();
+        List<Integer> inputGuess = Arrays.asList(1,1,2,3);
+        //when
+        Boolean result = availableInput.isValid(inputGuess);
+        //then
+        assertEquals(false, result);
+    }
 }
 
