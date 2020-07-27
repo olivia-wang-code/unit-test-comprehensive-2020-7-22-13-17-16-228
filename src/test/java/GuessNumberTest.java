@@ -94,5 +94,14 @@ public class GuessNumberTest {
         //then
         assertEquals(false, result);
     }
+    @Test
+    void should_return_false_when_guess_given_and_guess_time_is_more_than_6() {
+        //given
+        GuessNumber guessNumber=new GuessNumber();
+        //when
+        Boolean result=guessNumber.guessTimes(7);
+        //then
+        assertEquals(false, result);
+    }
 }
 
