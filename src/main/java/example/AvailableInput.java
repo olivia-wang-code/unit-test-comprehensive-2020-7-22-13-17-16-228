@@ -4,6 +4,10 @@ import java.util.List;
 public class AvailableInput {
    public Boolean isValid(List<Integer> guess) {
       int temp=guess.get(0);
+      int validGuessLength = 4;
+      if (guess.size() != validGuessLength) {
+         return false;
+      }
       for (int i = 1; i < 4; i++) {
          if (temp == guess.get(i)) {
             return false;
