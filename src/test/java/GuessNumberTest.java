@@ -84,5 +84,15 @@ public class GuessNumberTest {
         //then
         assertEquals(false, result);
     }
+    @Test
+    void should_return_false_when_guess_given_answer_1234_and_input_guess_size_is_not_4() {
+        //given
+        AvailableInput availableInput = new AvailableInput();
+        List<Integer> inputGuess = Arrays.asList(1,2,3,4,5);
+        //when
+        Boolean result = availableInput.isValid(inputGuess);
+        //then
+        assertEquals(false, result);
+    }
 }
 
