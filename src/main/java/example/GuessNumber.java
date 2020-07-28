@@ -5,35 +5,29 @@ import java.util.Arrays;
 import java.util.List;
 
 public class GuessNumber {
+    private final List<Integer> answer;
     private int guessNumber=0;
-
-    public GuessNumber(int guessNumber) {
-        this.guessNumber = guessNumber;
+    public GuessNumber(List<Integer> answer) {
+        this.answer = answer;
     }
 
-    public GuessNumber() {
-        this.guessNumber = guessNumber;
+    public  List<Integer> getGuessNumber() {
+        return answer;
     }
-
-    public int getGuessNumber() {
-        return guessNumber;
-    }
-    public String guess(List<Integer> inputGuess, List<Integer> answer) {
-
-        boolean isAllCorrect = true;
-        int countA = 0;
-        int countB = 0;
+    public String calculate(List<Integer> inputGuess, List<Integer> answer) {
+        int valueOfPositionCorrect = 0;
+        int valueOfNumberCorrect = 0;
         for (int index = 0; index < 4; index++) {
             if (inputGuess.get(index).equals(answer.get(index))) {
-                countA++;
+                valueOfPositionCorrect++;
                 continue;
             }
             if (inputGuess.contains(answer.get(index))) {
-                countB++;
+                valueOfNumberCorrect++;
             }
 
         }
-        return String.format("%sA%sB", countA, countB);
+        return String.format("%sA%sB", valueOfPositionCorrect, valueOfNumberCorrect);
     }
     public Boolean guessTimes(){
         this.guessNumber++;
