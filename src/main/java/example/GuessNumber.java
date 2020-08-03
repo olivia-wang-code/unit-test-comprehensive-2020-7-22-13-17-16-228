@@ -11,7 +11,7 @@ public class GuessNumber {
         this.answer = answer;
     }
 
-    public  List<Integer> getGuessNumber() {
+    public  List<Integer> getAnswer() {
         return answer;
     }
     public String calculate(List<Integer> inputGuess, List<Integer> answer) {

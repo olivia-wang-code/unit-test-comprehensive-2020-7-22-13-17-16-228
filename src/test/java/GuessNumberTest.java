@@ -13,7 +13,7 @@ public class GuessNumberTest {
         //given
         GuessNumber guessNumber = new GuessNumber(Arrays.asList(1, 2, 3, 4));
         List<Integer> inputGuess = Arrays.asList(1, 2, 3, 4);
-        List<Integer> answer = guessNumber.getGuessNumber();
+        List<Integer> answer = guessNumber.getAnswer();
         //when
         String result = guessNumber.calculate(inputGuess, answer);
         //then
@@ -23,7 +23,7 @@ public class GuessNumberTest {
     void should_return_0A0B_when_guess_given_answer_1234_and_input_guess_5678() {
         //given
         GuessNumber guessNumber = new GuessNumber(Arrays.asList(1, 2, 3, 4));
-        List<Integer> answer = guessNumber.getGuessNumber();
+        List<Integer> answer = guessNumber.getAnswer();
         List<Integer> inputGuess = Arrays.asList(5,6,7,8);
         //when
         String result = guessNumber.calculate(inputGuess, answer);
@@ -34,7 +34,7 @@ public class GuessNumberTest {
     void should_return_1A0B_when_guess_given_answer_1234_and_input_guess_1756() {
         //given
         GuessNumber guessNumber = new GuessNumber(Arrays.asList(1, 2, 3, 4));
-        List<Integer> answer = guessNumber.getGuessNumber();
+        List<Integer> answer = guessNumber.getAnswer();
         List<Integer> inputGuess = Arrays.asList(1,7,5,6);
         //when
         String result = guessNumber.calculate(inputGuess, answer);
@@ -46,7 +46,7 @@ public class GuessNumberTest {
         //given
         GuessNumber guessNumber = new GuessNumber(Arrays.asList(1, 2, 3, 4));
         //todo
-        List<Integer> answer = guessNumber.getGuessNumber();
+        List<Integer> answer = guessNumber.getAnswer();
         List<Integer> inputGuess = Arrays.asList(1, 3, 2, 4);
         //when
         String result = guessNumber.calculate(inputGuess, answer);
@@ -57,7 +57,7 @@ public class GuessNumberTest {
     void should_return_0A2B_when_guess_given_answer_1234_and_input_guess_3456() {
         //given
         GuessNumber guessNumber = new GuessNumber(Arrays.asList(1, 2, 3, 4));
-        List<Integer> answer = guessNumber.getGuessNumber();
+        List<Integer> answer = guessNumber.getAnswer();
         List<Integer> inputGuess = Arrays.asList(3,4,5,6);
         //when
         String result = guessNumber.calculate(inputGuess, answer);
@@ -68,7 +68,7 @@ public class GuessNumberTest {
     void should_return_0A4B_when_guess_given_answer_1234_and_input_guess_4321() {
         //given
         GuessNumber guessNumber = new GuessNumber(Arrays.asList(1, 2, 3, 4));
-        List<Integer> answer = guessNumber.getGuessNumber();
+        List<Integer> answer = guessNumber.getAnswer();
         List<Integer> inputGuess = Arrays.asList(4,3,2,1);
         //when
         String result = guessNumber.calculate(inputGuess, answer);
