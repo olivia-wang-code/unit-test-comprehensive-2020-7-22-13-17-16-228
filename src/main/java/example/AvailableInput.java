@@ -8,9 +8,9 @@ public class AvailableInput {
         if (guess.size() != validGuessLength) {
             return false;
         }
-        for (int i = 1; i < 4; i++) {
-            for (int j = 1; j < 4; j++)
-                if (guess.get(i).intValue()==guess.get(j).intValue()) return false;
+        for (int i = 0; i < 4; i++) {
+            for (int j = i + 1; j < 4; j++)
+                if (guess.get(i).intValue() == guess.get(j).intValue()) return false;
         }
         return true;
     }
